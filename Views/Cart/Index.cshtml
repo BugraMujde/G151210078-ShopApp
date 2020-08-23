@@ -1,0 +1,72 @@
+﻿
+
+<div class="container pt-100 mb-5">
+
+    <h1 class="mb-2">Alışveriş Sepetiniz</h1>
+    <div class="row">
+        <div class="col-8">
+
+            <ng-container *ngIf="cart.itemCount>0">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Brand</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewBag.cart)
+                        {
+                        <tr>
+                            <td><img src="@("~/images/"+item.Product.ImageName)" asp-append-version="true" width="140px" height="150px"/></td>
+                            <td>@item.Product.Category</td>
+                            <td>@item.Product.Brand</td>
+                            <td>@item.Quantity</td>
+                            <td>@(item.Product.Price * item.Quantity)</td>
+                            <td><a asp-controller="cart" asp-action="remove" asp-route-id="@item.Product.ID">Remove</a></td>
+                        </tr>
+                        }
+                        
+                    </tbody>
+                </table>
+            </ng-container>
+
+
+            <ng-container *ngIf="cart.itemCount==0">
+                <div class="alert alert-warning mt-3">
+                    Sepetinizde ürün yok <br>
+                    <button routerLink="/shop" class="btn btn-link p-0">
+                        Alışverişe devam etmek için tıklayınız.
+                    </button>
+                </div>
+            </ng-container>
+
+        </div>
+        <div class="col-4">
+            <ng-container *ngIf="cart.itemCount>0">
+                <div class="text-left">
+                    <h4>Alışveriş Özeti</h4>
+                </div>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Toplam</th>
+                            <td>
+                                @ViewBag.total  TL
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div>
+                    <a class="btn btn-primary btn-sm ml-2" asp-controller="cart" asp-action="OrderCreate">Satın Al</a>
+                    <a class="btn btn-primary btn-sm" asp-controller="home" asp-action="Index">Alışverişe Devam Et</a>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+</div>
