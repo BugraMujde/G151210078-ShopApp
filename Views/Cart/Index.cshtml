@@ -20,29 +20,30 @@
                     <tbody>
                         @foreach (var item in ViewBag.cart)
                         {
-                        <tr>
-                            <td><img src="@("~/images/"+item.Product.ImageName)" asp-append-version="true" width="140px" height="150px"/></td>
-                            <td>@item.Product.Category</td>
-                            <td>@item.Product.Brand</td>
-                            <td>@item.Quantity</td>
-                            <td>@(item.Product.Price * item.Quantity)</td>
-                            <td><a asp-controller="cart" asp-action="remove" asp-route-id="@item.Product.ID">Remove</a></td>
-                        </tr>
+                            <tr>
+                                <td><img src="@("~/images/"+item.Product.ImageName)" asp-append-version="true" width="140px" height="150px" /></td>
+                                <td>@item.Product.Category</td>
+                                <td>@item.Product.Brand</td>
+                                <td>@item.Quantity</td>
+                                <td>@(item.Product.Price * item.Quantity)</td>
+                                <td><a asp-controller="cart" asp-action="remove" asp-route-id="@item.Product.ID">Remove</a></td>
+                            </tr>
                         }
-                        
                     </tbody>
                 </table>
             </ng-container>
 
 
-            <ng-container *ngIf="cart.itemCount==0">
+            @if (ViewBag.cart == null)
+            {
                 <div class="alert alert-warning mt-3">
                     Sepetinizde ürün yok <br>
                     <button routerLink="/shop" class="btn btn-link p-0">
                         Alışverişe devam etmek için tıklayınız.
                     </button>
                 </div>
-            </ng-container>
+            }
+
 
         </div>
         <div class="col-4">

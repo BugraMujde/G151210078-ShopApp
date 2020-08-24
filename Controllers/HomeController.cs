@@ -10,18 +10,26 @@ using G151210078.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace G151210078.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment _hostEnvironment;
+        private RoleManager<IdentityRole> roleManager;
+        private UserManager<IdentityUser> userManager;
 
-   
-        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context, IWebHostEnvironment hostEnvironment)
+
+
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context, IWebHostEnvironment hostEnvironment, RoleManager<IdentityRole> roleMgr, UserManager<IdentityUser> usrMgr)
         {
+            roleManager = roleMgr;
+            userManager = usrMgr;
             _logger = logger;
             _context = context;
             this._hostEnvironment = hostEnvironment;
@@ -39,7 +47,6 @@ namespace G151210078.Controllers
             IEnumerable<string> distinctCategories = categoryList.AsQueryable().Distinct();
             IEnumerable<string> distinctBrands = brandList.AsQueryable().Distinct();
 
-            
             ViewBag.Brands = distinctBrands;
             ViewBag.Categories = distinctCategories;
             ViewBag.Brand = string.Format("{0}", brand);

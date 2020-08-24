@@ -40,7 +40,6 @@ C:\Users\Que\source\repos\G151210078\obj\Debug\netcoreapp3.1\G151210078.TagHelpe
 C:\Users\Que\source\repos\G151210078\obj\Debug\netcoreapp3.1\G151210078.RazorCoreGenerate.cache
 C:\Users\Que\source\repos\G151210078\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\Que\source\repos\G151210078\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\Que\source\repos\G151210078\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Que\source\repos\G151210078\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Que\source\repos\G151210078\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Que\source\repos\G151210078\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
@@ -190,7 +189,6 @@ C:\Users\Que\source\repos\G151210078\obj\Debug\netcoreapp3.1\Razor\Views\Role\Cr
 C:\Users\Que\source\repos\G151210078\obj\Debug\netcoreapp3.1\Razor\Views\Role\Edit.cshtml.g.cs
 C:\Users\Que\source\repos\G151210078\obj\Debug\netcoreapp3.1\Razor\Views\Role\Index.cshtml.g.cs
 C:\Users\Que\source\repos\G151210078\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
-C:\Users\Que\source\repos\G151210078\obj\Debug\netcoreapp3.1\G151210078.csprojAssemblyReference.cache
 C:\Users\Que\source\repos\G151210078\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Users.cshtml.g.cs
 C:\Users\Que\Desktop\G151210078-7633ac5e7e621644eac6cc554f5e6975532edbe1\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Que\Desktop\G151210078-7633ac5e7e621644eac6cc554f5e6975532edbe1\bin\Debug\netcoreapp3.1\appsettings.json
@@ -389,3 +387,7 @@ C:\Users\Que\Desktop\G151210078-7633ac5e7e621644eac6cc554f5e6975532edbe1\obj\Deb
 C:\Users\Que\Desktop\G151210078-7633ac5e7e621644eac6cc554f5e6975532edbe1\obj\Debug\netcoreapp3.1\Razor\Views\Home\OrderList.cshtml.g.cs
 C:\Users\Que\Desktop\G151210078-7633ac5e7e621644eac6cc554f5e6975532edbe1\obj\Debug\netcoreapp3.1\Razor\Views\Home\OrderDetail.cshtml.g.cs
 C:\Users\Que\Desktop\G151210078-7633ac5e7e621644eac6cc554f5e6975532edbe1\obj\Debug\netcoreapp3.1\G151210078.csprojAssemblyReference.cache
+C:\Users\Que\source\repos\G151210078\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
+C:\Users\Que\source\repos\G151210078\obj\Debug\netcoreapp3.1\Razor\Views\Home\OrderDetail.cshtml.g.cs
+C:\Users\Que\source\repos\G151210078\obj\Debug\netcoreapp3.1\Razor\Views\Home\OrderList.cshtml.g.cs
+C:\Users\Que\source\repos\G151210078\obj\Debug\netcoreapp3.1\G151210078.csprojAssemblyReference.cache
